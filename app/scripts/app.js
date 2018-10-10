@@ -35,7 +35,7 @@ Instructions:
 
         Your code goes here!
          */
-        return fetch('url', {
+        return fetch(url, {
             method: 'get',
         });
     }
