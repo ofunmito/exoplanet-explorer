@@ -52,8 +52,9 @@ Instructions:
         Your code goes here!
          */
         return get(url).then(function(response) {
+            // Handle network errors
             if (!response.ok) {
-                throw Error(response.statusText ? response.statusText : 'Unknown Network Error');
+                throw Error(response.statusText ? response.statusText : 'Uknown network error');
             }
 
             return response.json();
@@ -68,7 +69,7 @@ Instructions:
 
         Your code goes here too!
          */
-        getJSON('../data/earth-like-results.json')
+        getJSON('./data/earth-like-results.json')
             .then(function(response) {
                 addSearchHeader(response.query);
                 console.log(response);
